@@ -1,0 +1,17 @@
+[0.000000] (-) TimerEvent: {}
+[0.001102] (CRAP_sim_def) JobQueued: {'identifier': 'CRAP_sim_def', 'dependencies': OrderedDict()}
+[0.001127] (Detection_node) JobQueued: {'identifier': 'Detection_node', 'dependencies': OrderedDict()}
+[0.001147] (learning_node) JobQueued: {'identifier': 'learning_node', 'dependencies': OrderedDict()}
+[0.001225] (CRAP_sim_def) JobStarted: {'identifier': 'CRAP_sim_def'}
+[0.017763] (Detection_node) JobStarted: {'identifier': 'Detection_node'}
+[0.099817] (-) TimerEvent: {}
+[0.200136] (-) TimerEvent: {}
+[0.263400] (Detection_node) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 105, in build\n    return await extension.build(additional_hooks=additional_hooks)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 81, in build\n    available_commands = await self._get_available_commands(\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 171, in _get_available_commands\n    output = await check_output(\n  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 128, in check_output\n    assert not rc, f\'Expected {args} to pass: {stderr_data}\'\nAssertionError: Expected [\'/usr/bin/python3\', \'setup.py\', \'--help-commands\'] to pass: /usr/bin/python3: can\'t open file \'/home/parallels/162D-Project/src/Detect_Poop/Detection_node/setup.py\': [Errno 2] No such file or directory\n\n'}
+[0.263820] (Detection_node) JobEnded: {'identifier': 'Detection_node', 'rc': 1}
+[0.300231] (-) TimerEvent: {}
+[0.400577] (-) TimerEvent: {}
+[0.500881] (-) TimerEvent: {}
+[0.601274] (-) TimerEvent: {}
+[0.677755] (CRAP_sim_def) JobEnded: {'identifier': 'CRAP_sim_def', 'rc': 'SIGINT'}
+[0.678676] (learning_node) JobSkipped: {'identifier': 'learning_node'}
+[0.678714] (-) EventReactorShutdown: {}
