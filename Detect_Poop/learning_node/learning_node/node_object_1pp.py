@@ -12,8 +12,10 @@ from rclpy.node import Node             # ROS2 节点类
 import cv2                              # OpenCV图像处理库
 import numpy as np                      # Python数值计算库
 
-lower_brown = np.array([95, 88, 130])     # Poop的HSV阈值下限
-upper_brown = np.array([115, 108, 160])  # Poop的HSV阈值上限
+lower_brown = np.array([10, 50, 60])    # Poop的HSV阈值下限
+upper_brown = np.array([40, 225, 255])  # Poop的HSV阈值上限
+
+
 
 def object_detect(image):
     hsv_img = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
@@ -73,7 +75,7 @@ def main(args=None):                                                            
     node = Node("node_object")                                                     # 创建ROS2节点对象并进行初始化
     node.get_logger().info("ROS2节点示例：检测图片中的Poop")
 
-    image = cv2.imread('src/Detect_Poop/learning_node/learning_node/sample.jpg')  # 读取图像
+    image = cv2.imread('src/162E_Poop_Detection/Detect_Poop/learning_node/learning_node/sample2.png')  # 读取图像
     object_detect(image)                                                            # 苹果检测
     rclpy.spin(node)                                                               # 循环等待ROS2退出
     node.destroy_node()                                                            # 销毁节点对象
